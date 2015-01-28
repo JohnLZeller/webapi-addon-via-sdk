@@ -1,0 +1,10 @@
+{
+  "name": "example-web-api-via-sdk",
+  "title": "example-web-api-via-sdk",
+  "id": "jid1-LUAbDXoLKDgHAA@jetpack",
+  "description": "a basic add-on",
+  "author": "",
+  "license": "MPL 2.0",
+  "version": "0.1",
+  "main": "./main.js"
+}
