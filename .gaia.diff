@@ -1,5 +1,5 @@
 diff --git a/build/config/additional-extensions.json b/build/config/additional-extensions.json
-index b50c387..f62b03c 100644
+index b50c387..28e0294 100644
 --- a/build/config/additional-extensions.json
 +++ b/build/config/additional-extensions.json
 @@ -1,5 +1,8 @@
@@ -7,7 +7,7 @@ index b50c387..f62b03c 100644
    "Screen Reader Simulator": {
      "url" : "http://addons.mozilla.org/firefox/downloads/latest/440614/addon-440614-latest.xpi"
 +  },
-+  "Manifest Example": {
-+  	"url" : "file:///Users/jzeller/JobSchedulerAPI/xpis/jid1-LUAbDXoLKDgHAA\@jetpack.xpi"
++  "SDK Example": {
++  	"url" : "file:///Users/jzeller/JobSchedulerAPI/xpis/jid1-LUAbDXoLKDgHAA@jetpack.xpi"
    }
  }
