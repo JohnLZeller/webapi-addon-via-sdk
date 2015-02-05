@@ -12,3 +12,8 @@ Run 'jpm xpi' to generate an xpi
 * The xpi that jpm generates sets the following in install.rdf
 	* bootstrap = true
 	* unpack = false
+* Discovered that the install.rdf in the xpi that jpm generates had the guid of firefox and not b2g
+  * Firefox GUID: ec8030f7-c20a-464f-9b0e-13a3a9e97384
+  * B2G GUID: 3c2e2abc-06d4-11e1-ac3b-374f68613e61
+* Also discovered that the install.rdf in the xpi that jpm generates had min and max versions set for Firefox
+	* Reset to have minVersion=6.0 and maxVersion=*
