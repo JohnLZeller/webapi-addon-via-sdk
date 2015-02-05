@@ -1,0 +1,35 @@
+1) Build was successful!
+2) 'SDK Example' extension xpi
+	showed up under gaia/build_stage/additional-extensions
+	WAS unpacked under gaia/build_stage/additional-extensions
+3) Ran b2g-desktop with '/Applications/B2G.app/Contents/MacOS/b2g-bin -jsconsole -profile ~/JobSchedulerAPI/gaia/profile-debug/'
+4) Message 'HEREHEREHEREHERE' is not dumped to stdout
+5) CTRL+Z to stop process
+6) Stdout showed the 'SDK Example' xpi in some output errors, via the pacakage id jid1-LUAbDXoLKDgHAA@jetpack:
+	2147942487214794248721479424872147942487214794248721479424871423106960618	addons.xpi	WARN	Error loading bootstrap.js for jid1-LUAbDXoLKDgHAA@jetpack: 
+		Error: resource://gre/modules/sdk/system/XulApp.js - EXPORTED_SYMBOLS is not an array. (resource://gre/modules/sdk/system/Startup.js:1:180) 
+		JS Stack trace: @Startup.js:1:181 < @resource://gre/modules/addons/XPIProvider.jsm 
+			-> file:///Users/jzeller/JobSchedulerAPI/gaia/profile-debug/extensions/jid1-LUAbDXoLKDgHAA@bootstrap.js:35:17 
+				< @XPIProvider.jsm:615:1 
+				< XPI_loadBootstrapScope@XPIProvider.jsm:615:51 
+				< XPI_callBootstrapMethod@XPIProvider.jsm:626:1 
+				< XPI_startup@XPIProvider.jsm:266:40 
+				< callProvider@AddonManager.jsm:22:28 
+				< _startProvider@AddonManager.jsm:70:153 
+				< AMI_startup@AddonManager.jsm:97:306 
+				< AMP_startup@AddonManager.jsm:306:168 
+				< AMC_observe@addonManager.js:3:1
+	1423106960618	addons.xpi	WARN	Exception running bootstrap method startup on jid1-LUAbDXoLKDgHAA@jetpack: 
+		TypeError: this.bootstrapScopes[aAddon.id][aMethod] is not a function (resource://gre/modules/addons/XPIProvider.jsm:630:20)
+		JS Stack trace: XPI_callBootstrapMethod@XPIProvider.jsm:630:21 
+			< XPI_startup@XPIProvider.jsm:266:40 
+			< callProvider@AddonManager.jsm:22:28 
+			< _startProvider@AddonManager.jsm:70:153 
+			< AMI_startup@AddonManager.jsm:97:306 
+			< AMP_startup@AddonManager.jsm:306:168 
+			< AMC_observe@addonManager.js:3:1
+8) The gist of the errors are:
+	EXPORTED_SYMBOLS is not an array.
+	this.bootstrapScopes[aAddon.id][aMethod] is not a function
+9) Fix Attempt:
+	nothing yet

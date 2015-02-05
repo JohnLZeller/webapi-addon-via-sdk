@@ -1,0 +1,337 @@
+MacBook-Pro:gaia jzeller$ make DESKTOP_SHIMS=1 NOFTU=1 DEBUG=1
+Makefile:144: NO_FTU_PING=1
+Test SDK directory: /Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01
+rm -rf /Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01
+mkdir -p "/Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01"
+Downloading B2G SDK...
+/usr/bin/curl -OLsS "http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/2014/08/2014-08-12-04-02-01-mozilla-central/b2g-34.0a1.multi.mac64.dmg"
+hdiutil attach b2g-34.0a1.multi.mac64.dmg -readonly -nobrowse -mount required -mountpoint .b2g.tmp
+Checksumming Driver Descriptor Map (DDM : 0)…
+     Driver Descriptor Map (DDM : 0): verified   CRC32 $939A494A
+Checksumming Apple (Apple_partition_map : 1)…
+     Apple (Apple_partition_map : 1): verified   CRC32 $8C0B7D7D
+Checksumming DiscRecording 6.0d1 (Apple_HFS : 2)…
+...............................................................................................................................................................................................................................................................................
+ DiscRecording 6.0d1 (Apple_HFS : 2): verified   CRC32 $8A1F6131
+verified   CRC32 $7AF48C60
+/dev/disk7          	Apple_partition_scheme         	
+/dev/disk7s1        	Apple_partition_map            	
+/dev/disk7s2        	Apple_HFS                      	/Users/jzeller/JobSchedulerAPI/gaia/.b2g.tmp
+cp -Rf .b2g.tmp/* "/Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01"
+ln -sf "/Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS" "/Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/b2g"
+umount .b2g.tmp
+test -f /Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/xpcshell
+run-js-command gaia/app
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+[rebuild] rebuildAppDirs: ["/Users/jzeller/JobSchedulerAPI/gaia/apps/bluetooth","/Users/jzeller/JobSchedulerAPI/gaia/apps/bookmark","/Users/jzeller/JobSchedulerAPI/gaia/apps/calendar","/Users/jzeller/JobSchedulerAPI/gaia/apps/callscreen","/Users/jzeller/JobSchedulerAPI/gaia/apps/camera","/Users/jzeller/JobSchedulerAPI/gaia/apps/clock","/Users/jzeller/JobSchedulerAPI/gaia/apps/collection","/Users/jzeller/JobSchedulerAPI/gaia/apps/communications","/Users/jzeller/JobSchedulerAPI/gaia/apps/costcontrol","/Users/jzeller/JobSchedulerAPI/gaia/apps/default_theme","/Users/jzeller/JobSchedulerAPI/gaia/apps/download","/Users/jzeller/JobSchedulerAPI/gaia/apps/email","/Users/jzeller/JobSchedulerAPI/gaia/apps/emergency-call","/Users/jzeller/JobSchedulerAPI/gaia/apps/findmydevice","/Users/jzeller/JobSchedulerAPI/gaia/apps/fl","/Users/jzeller/JobSchedulerAPI/gaia/apps/fm","/Users/jzeller/JobSchedulerAPI/gaia/apps/ftu","/Users/jzeller/JobSchedulerAPI/gaia/apps/gallery","/Users/jzeller/JobSchedulerAPI/gaia/apps/homescreen","/Users/jzeller/JobSchedulerAPI/gaia/apps/keyboard","/Users/jzeller/JobSchedulerAPI/gaia/apps/marketplace.firefox.com","/Users/jzeller/JobSchedulerAPI/gaia/apps/music","/Users/jzeller/JobSchedulerAPI/gaia/apps/network-alerts","/Users/jzeller/JobSchedulerAPI/gaia/apps/operatorvariant","/Users/jzeller/JobSchedulerAPI/gaia/apps/pdfjs","/Users/jzeller/JobSchedulerAPI/gaia/apps/privacy-panel","/Users/jzeller/JobSchedulerAPI/gaia/apps/ringtones","/Users/jzeller/JobSchedulerAPI/gaia/apps/search","/Users/jzeller/JobSchedulerAPI/gaia/apps/settings","/Users/jzeller/JobSchedulerAPI/gaia/apps/sharedtest","/Users/jzeller/JobSchedulerAPI/gaia/apps/sms","/Users/jzeller/JobSchedulerAPI/gaia/apps/system","/Users/jzeller/JobSchedulerAPI/gaia/apps/verticalhome","/Users/jzeller/JobSchedulerAPI/gaia/apps/video","/Users/jzeller/JobSchedulerAPI/gaia/apps/wallpaper","/Users/jzeller/JobSchedulerAPI/gaia/apps/wappush","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/marketplace-dev.allizom.org","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/in_app_pay_test","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/marketplace.allizom.org","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/mochitest","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/bookmarks-reader","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/ds-test","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/geoloc","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/membuster","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/music2","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-ime","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/share-receiver","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/template","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-agent","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-container","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-iac-publisher","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-iac-subscriber","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-otasp","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-receiver-1","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-receiver-2","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-receiver-inline","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-wappush","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-shared-css","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/uitest","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/uitest-privileged","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-fxa-client","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/sheet-app-1","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/sheet-app-2","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/sheet-app-3","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-findmydevice","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/contacts-manager","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/contacts-ds-provider1","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/contacts-ds-provider2","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/demo-hci-event","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/theme-test-1","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/theme-test-2","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/theme-test-3","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/nfc-api-test","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/addon1","/Users/jzeller/JobSchedulerAPI/gaia/dev_apps/addon2","/Users/jzeller/JobSchedulerAPI/gaia/shared"]
+[svoperapps.js] PROFILE_DIR, GAIA_DISTRIBUTION_DIR, VARIANT_PATH are all required
+[settings.js] Writing settings file: /Users/jzeller/JobSchedulerAPI/gaia/profile-debug/settings.json
+[settings.js] Writing settings file: /Users/jzeller/JobSchedulerAPI/gaia/profile-debug/defaults/settings.json
+2015-02-04 19:15:03: stackwalker.cc:125: INFO: Couldn't load symbols for: /Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/XUL|1799DA0178C2361EA31E7142A768ECC40
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x100000103b57d00
+2015-02-04 19:15:03: stackwalker.cc:125: INFO: Couldn't load symbols for: /Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/xpcshell|51A7B64F9E3739BF9B6C4967ABC8F7E10
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf08a0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x18000ffff
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x109703fa0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x105d6b388
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x10e1aab80
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b50028
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b0f138
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0618
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x8000000800000000
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0620
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf010a
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf06b0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1035aa0c0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1035aa0c0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x10a113fa0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0c60
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0c68
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d00
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0c78
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d18
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf07a0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1035aa0e0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff00000001
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d50
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf1060
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x109687880
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf06e8
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0xffff
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0f78
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0xffffffff
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0850
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d00
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1031b5630
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x112c24388
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x112c2430a
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d68
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf1040
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0xfff9800000000001
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0xa0060
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0xffffffff
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x10967a360
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d68
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0870
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0898
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x109739458
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0f70
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d00
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x3
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf08c0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0840
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0f60
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0f58
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d18
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf08e0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103ff1900
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0848
+2015-02-04 19:15:03: stackwalker.cc:125: INFO: Couldn't load symbols for: /Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/libnss3.dylib|31C06DCD86D43EC09742C250052C49C30
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1031b7590
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103bceba0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b1c070
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1031b7590
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x105df83d0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x9005f139bb34445
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x109739000
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d00
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0f78
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x111bfc460
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fffffffffff
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf08a0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff00000000
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0f78
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0f68
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x3fc8e08
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1031b3d20
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d00
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x6
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103bceba0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x105df83d0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d00
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x1
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x112b1bce0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x112b1d040
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x109a68180
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x109739000
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x109739198
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d60
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf63b0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103fe6dc0
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x25f5d00
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0f78
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0f68
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b50028
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d18
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf0960
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x111bfc460
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x103b57d18
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf1400
+2015-02-04 19:15:03: basic_code_modules.cc:88: INFO: No module at 0x111bfd700
+[app] building bluetooth app...
+run-js-command bluetooth/build-app
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+[app] building calendar app...
+[app] building camera app...
+[app] building clock app...
+[app] building collection app...
+[app] building communications app...
+[app] building costcontrol app...
+run-js-command calendar/build-app
+run-js-command clock/build-app
+run-js-command camera/build-app
+run-js-command costcontrol/build-app
+run-js-command collection/build-app
+run-js-command communications/build-app
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+Will run rjs optimizer...
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+[app] building email app...
+run-js-command email/build-app
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+[app] building findmydevice app...
+run-js-command findmydevice/build-app
+require.js optimize ok
+[app] building ftu app...
+[app] building gallery app...
+[app] building homescreen app...
+[app] building keyboard app...
+[app] building music app...
+run-js-command keyboard/build-app
+run-js-command ftu/build-app
+run-js-command homescreen/build-app
+run-js-command gallery/build-app
+run-js-command music/build-app
+[app] building operatorvariant app...
+run-js-command operatorvariant/build-app
+require.js optimize ok
+[operatorvariant] /Users/jzeller/JobSchedulerAPI/gaia/distribution/variant.json not found. Single variant resources will not be added.
+
+Warning: Can not find application browser at apps
+[app] building privacy-panel app...
+run-js-command privacy-panel/build-app
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+[app] building search app...
+[app] building settings app...
+run-js-command search/build-app
+run-js-command settings/build-app
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+[OK] rjs optimize
+require.js optimize ok
+[cmd] /opt/local/bin/git --git-dir=/Users/jzeller/JobSchedulerAPI/gaia/.git log --format=%H HEAD -1
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+[privacy-panel-app-build] Last commit: f66c928d48a0c560940217571d69cf8dc95faca0
+
+[app] building sms app...
+[app] building system app...
+[app] building verticalhome app...
+run-js-command sms/build-app
+run-js-command verticalhome/build-app
+run-js-command system/build-app
+2015-02-04 19:15:23: stackwalker.cc:125: INFO: Couldn't load symbols for: /usr/lib/system/libsystem_kernel.dylib|93E0E0A975B63904BB4E4BC7C05F4B6B0
+2015-02-04 19:15:23: stackwalker.cc:125: INFO: Couldn't load symbols for: /Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/libnss3.dylib|31C06DCD86D43EC09742C250052C49C30
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x1002a45b0
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf58e0
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x11279ec80
+2015-02-04 19:15:23: stackwalker.cc:125: INFO: Couldn't load symbols for: /Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/XUL|1799DA0178C2361EA31E7142A768ECC40
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x103a00040
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x103be3250
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x100000000000040
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x11279ec80
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x1128884f0
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x10fad1478
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x1000500000045
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x3f
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf5888
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x103b57d00
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x1
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf6548
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x0
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x10997cb00
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x29
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf6548
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x11279ebc0
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x7fff5fbf5948
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x111369bb0
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x6f63692f656c7974
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x6f656469762f736e
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x676e702e3438325f
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x200a2c7d20200a22
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x6976697463612220
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x7b203a2273656974
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x697022202020200a
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x200a7b203a226b63
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x6966222020202020
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x203a22737265746c
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x2020202020200a7b
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x2265707974222020
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x65646976225b203a
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x7622202c222a2f6f
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x6265772f6f656469
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x64697622202c226d
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x2c2234706d2f6f65
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x2f6f656469762220
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x22202c2270706733
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x67332f6f65646976
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x7622202c22327070
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x67676f2f6f656469
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x20202020200a5d22
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x2020200a2c7d2020
+2015-02-04 19:15:23: basic_code_modules.cc:88: INFO: No module at 0x7073696422202020
+[app] building wallpaper app...
+[app] building wappush app...
+run-js-command wallpaper/build-app
+run-js-command wappush/build-app
+[app] building music2 app...
+run-js-command music2/build-app
+require.js optimize ok
+[cmd] /opt/local/bin/git --git-dir=/Users/jzeller/JobSchedulerAPI/gaia/.git log -1 --format=%H%n%ct HEAD
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+System JS : ERROR file:///Users/jzeller/JobSchedulerAPI/gaia/b2g_sdk/34.0a1-2014-08-12-04-02-01/B2G.app/Contents/MacOS/components/nsHandlerService.js:120 - NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]
+[settings-app-build] Writing git commit information to: /Users/jzeller/JobSchedulerAPI/gaia/build_stage/settings/resources/gaia_commit.txt
+Finished: test ui config file: ./dev_apps/test-agent/config.json
+run-js-command gaia/additional-extensions
+[additional-extensions] {
+  "ADB": "adb",
+  "GAIA_DIR": "/Users/jzeller/JobSchedulerAPI/gaia",
+  "PROFILE_DIR": "/Users/jzeller/JobSchedulerAPI/gaia/profile-debug",
+  "PROFILE_FOLDER": "profile-debug",
+  "GAIA_SCHEME": "app://",
+  "GAIA_DOMAIN": "gaiamobile.org",
+  "DEBUG": "1",
+  "LOCAL_DOMAINS": "1",
+  "DESKTOP": "1",
+  "DEVICE_DEBUG": "0",
+  "NO_LOCK_SCREEN": "0",
+  "SCREEN_TIMEOUT": "-1",
+  "SYSTEM": "app://system.gaiamobile.org",
+  "GAIA_PORT": ":8080",
+  "GAIA_LOCALES_PATH": "locales",
+  "GAIA_INSTALL_PARENT": "",
+  "LOCALES_FILE": "shared/resources/languages.json",
+  "GAIA_KEYBOARD_LAYOUTS": "en,pt-BR,es,de,fr,fr-CA,pl,ko,zh-Hans-Pinyin,en-Dvorak",
+  "GAIA_KEYBOARD_PRELOAD_DICT_LAYOUTS": "en,pt-BR,es,de,fr,fr-CA,pl,ko,zh-Hans-Pinyin,en-Dvorak",
+  "GAIA_KEYBOARD_ENABLE_USER_DICT": "",
+  "LOCALE_BASEDIR": "",
+  "BUILD_APP_NAME": "*",
+  "PRODUCTION": "0",
+  "GAIA_OPTIMIZE": "0",
+  "GAIA_DEVICE_TYPE": "phone",
+  "GAIA_DEV_PIXELS_PER_PX": "1",
+  "DOGFOOD": "0",
+  "OFFICIAL": "",
+  "GAIA_DEFAULT_LOCALE": "en-US",
+  "GAIA_PRETRANSLATE": "1",
+  "GAIA_CONCAT_LOCALES": "1",
+  "GAIA_ENGINE": "xpcshell",
+  "GAIA_DISTRIBUTION_DIR": "/Users/jzeller/JobSchedulerAPI/gaia/distribution",
+  "GAIA_APPDIRS": "/Users/jzeller/JobSchedulerAPI/gaia/apps/bluetooth /Users/jzeller/JobSchedulerAPI/gaia/apps/bookmark /Users/jzeller/JobSchedulerAPI/gaia/apps/calendar /Users/jzeller/JobSchedulerAPI/gaia/apps/callscreen /Users/jzeller/JobSchedulerAPI/gaia/apps/camera /Users/jzeller/JobSchedulerAPI/gaia/apps/clock /Users/jzeller/JobSchedulerAPI/gaia/apps/collection /Users/jzeller/JobSchedulerAPI/gaia/apps/communications /Users/jzeller/JobSchedulerAPI/gaia/apps/costcontrol /Users/jzeller/JobSchedulerAPI/gaia/apps/default_theme /Users/jzeller/JobSchedulerAPI/gaia/apps/download /Users/jzeller/JobSchedulerAPI/gaia/apps/email /Users/jzeller/JobSchedulerAPI/gaia/apps/emergency-call /Users/jzeller/JobSchedulerAPI/gaia/apps/findmydevice /Users/jzeller/JobSchedulerAPI/gaia/apps/fl /Users/jzeller/JobSchedulerAPI/gaia/apps/fm /Users/jzeller/JobSchedulerAPI/gaia/apps/ftu /Users/jzeller/JobSchedulerAPI/gaia/apps/gallery /Users/jzeller/JobSchedulerAPI/gaia/apps/homescreen /Users/jzeller/JobSchedulerAPI/gaia/apps/keyboard /Users/jzeller/JobSchedulerAPI/gaia/apps/marketplace.firefox.com /Users/jzeller/JobSchedulerAPI/gaia/apps/music /Users/jzeller/JobSchedulerAPI/gaia/apps/network-alerts /Users/jzeller/JobSchedulerAPI/gaia/apps/operatorvariant /Users/jzeller/JobSchedulerAPI/gaia/apps/pdfjs /Users/jzeller/JobSchedulerAPI/gaia/apps/privacy-panel /Users/jzeller/JobSchedulerAPI/gaia/apps/ringtones /Users/jzeller/JobSchedulerAPI/gaia/apps/search /Users/jzeller/JobSchedulerAPI/gaia/apps/settings /Users/jzeller/JobSchedulerAPI/gaia/apps/sharedtest /Users/jzeller/JobSchedulerAPI/gaia/apps/sms /Users/jzeller/JobSchedulerAPI/gaia/apps/system /Users/jzeller/JobSchedulerAPI/gaia/apps/verticalhome /Users/jzeller/JobSchedulerAPI/gaia/apps/video /Users/jzeller/JobSchedulerAPI/gaia/apps/wallpaper /Users/jzeller/JobSchedulerAPI/gaia/apps/wappush /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/marketplace-dev.allizom.org /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/in_app_pay_test /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/marketplace.allizom.org /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/mochitest /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/bookmarks-reader /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/ds-test /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/geoloc /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/membuster /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/music2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-ime /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/share-receiver /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/template /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-agent /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-container /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-iac-publisher /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-iac-subscriber /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-otasp /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-receiver-1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-receiver-2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-receiver-inline /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-wappush /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-shared-css /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/uitest /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/uitest-privileged /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-fxa-client /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/sheet-app-1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/sheet-app-2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/sheet-app-3 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-findmydevice /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/contacts-manager /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/contacts-ds-provider1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/contacts-ds-provider2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/demo-hci-event /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/theme-test-1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/theme-test-2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/theme-test-3 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/nfc-api-test /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/addon1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/addon2",
+  "GAIA_ALLAPPDIRS": "/Users/jzeller/JobSchedulerAPI/gaia/apps/bluetooth /Users/jzeller/JobSchedulerAPI/gaia/apps/bookmark /Users/jzeller/JobSchedulerAPI/gaia/apps/calendar /Users/jzeller/JobSchedulerAPI/gaia/apps/callscreen /Users/jzeller/JobSchedulerAPI/gaia/apps/camera /Users/jzeller/JobSchedulerAPI/gaia/apps/clock /Users/jzeller/JobSchedulerAPI/gaia/apps/collection /Users/jzeller/JobSchedulerAPI/gaia/apps/communications /Users/jzeller/JobSchedulerAPI/gaia/apps/costcontrol /Users/jzeller/JobSchedulerAPI/gaia/apps/default_theme /Users/jzeller/JobSchedulerAPI/gaia/apps/download /Users/jzeller/JobSchedulerAPI/gaia/apps/email /Users/jzeller/JobSchedulerAPI/gaia/apps/emergency-call /Users/jzeller/JobSchedulerAPI/gaia/apps/findmydevice /Users/jzeller/JobSchedulerAPI/gaia/apps/fl /Users/jzeller/JobSchedulerAPI/gaia/apps/fm /Users/jzeller/JobSchedulerAPI/gaia/apps/ftu /Users/jzeller/JobSchedulerAPI/gaia/apps/gallery /Users/jzeller/JobSchedulerAPI/gaia/apps/homescreen /Users/jzeller/JobSchedulerAPI/gaia/apps/keyboard /Users/jzeller/JobSchedulerAPI/gaia/apps/marketplace.firefox.com /Users/jzeller/JobSchedulerAPI/gaia/apps/music /Users/jzeller/JobSchedulerAPI/gaia/apps/network-alerts /Users/jzeller/JobSchedulerAPI/gaia/apps/operatorvariant /Users/jzeller/JobSchedulerAPI/gaia/apps/pdfjs /Users/jzeller/JobSchedulerAPI/gaia/apps/privacy-panel /Users/jzeller/JobSchedulerAPI/gaia/apps/ringtones /Users/jzeller/JobSchedulerAPI/gaia/apps/search /Users/jzeller/JobSchedulerAPI/gaia/apps/settings /Users/jzeller/JobSchedulerAPI/gaia/apps/sharedtest /Users/jzeller/JobSchedulerAPI/gaia/apps/sms /Users/jzeller/JobSchedulerAPI/gaia/apps/system /Users/jzeller/JobSchedulerAPI/gaia/apps/verticalhome /Users/jzeller/JobSchedulerAPI/gaia/apps/video /Users/jzeller/JobSchedulerAPI/gaia/apps/wallpaper /Users/jzeller/JobSchedulerAPI/gaia/apps/wappush /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/addon1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/addon2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/bookmarks-reader /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/contacts-ds-provider1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/contacts-ds-provider2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/contacts-manager /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/crystalskull /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/cubevid /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/custom-origin /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/demo-hci-event /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/demo-keyboard /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/ds-test /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/feedback /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/geoloc /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/homescreen-stingray /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/image-uploader /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/in_app_pay_test /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/marketplace-dev.allizom.org /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/marketplace.allizom.org /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/membuster /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/mochitest /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/music2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/nfc-api-test /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/share-receiver /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/sheet-app-1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/sheet-app-2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/sheet-app-3 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/template /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-agent /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-container /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-findmydevice /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-fxa-client /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-iac-publisher /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-iac-subscriber /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-ime /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-keyboard-app /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-l10n-missing /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-l10n-optimize /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-otasp /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-receiver-1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-receiver-2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-receiver-inline /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-sensors /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-shared-css /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/test-wappush /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/testpermission /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/theme-test-1 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/theme-test-2 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/theme-test-3 /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/uitest /Users/jzeller/JobSchedulerAPI/gaia/dev_apps/uitest-privileged /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/app-deck /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/apps /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/bin /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/browser /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/build /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/customization /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/dev_apps /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/device-deck /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/dlna-player /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/fling-player /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/fling-sender /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/locales /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/notification-receiver /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/notification-sender /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/shared /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/smart-home /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/smart-settings /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/smart-system /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/test_media /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/tests /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/tools /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/tv_build /Users/jzeller/JobSchedulerAPI/gaia/tv_apps/tv_shared",
+  "GAIA_MEMORY_PROFILE": "",
+  "NOFTU": "1",
+  "REMOTE_DEBUGGER": "0",
+  "TARGET_BUILD_VARIANT": "",
+  "SETTINGS_PATH": "build/config/custom-settings.json",
+  "FTU_PING_URL": "",
+  "KEYBOARD_LAYOUTS_PATH": "build/config/keyboard-layouts.json",
+  "CONTACTS_IMPORT_SERVICES_PATH": "build/config/communications_services.json",
+  "EMAIL_SERVICES_PATH": "",
+  "STAGE_DIR": "/Users/jzeller/JobSchedulerAPI/gaia/build_stage",
+  "GAIA_APP_TARGET": "engineering",
+  "BUILD_DEBUG": "0",
+  "VARIANT_PATH": "",
+  "REBUILD": "0",
+  "P": "1",
+  "VERBOSE": "",
+  "STAGE_APP_DIR": "/Users/jzeller/JobSchedulerAPI/gaia/build_stage/gaia",
+  "APP_DIR": "/Users/jzeller/JobSchedulerAPI/gaia"
+}
+[additional-extensions] load downloaded extensions
+Invalid JSON file : /Users/jzeller/JobSchedulerAPI/gaia/build_stage/additional-extensions/downloaded.json
+[additional-extensions] load additional extensions
+[additional-extensions] load custom extensions
+Invalid JSON file : /Users/jzeller/JobSchedulerAPI/gaia/build/config/custom-extensions.json
+[additional-extensions] Installing Screen Reader Simulator...
+[additional-extensions] Installing SDK Example...
+[additional-extensions] download from http://addons.mozilla.org/firefox/downloads/latest/440614/addon-440614-latest.xpi
+[additional-extensions] download from file:///Users/jzeller/JobSchedulerAPI/xpis/jid1-LUAbDXoLKDgHAA@jetpack.xpi
+[additional-extensions] file:///Users/jzeller/JobSchedulerAPI/xpis/jid1-LUAbDXoLKDgHAA@jetpack.xpi downloaded
+[additional-extensions] http://addons.mozilla.org/firefox/downloads/latest/440614/addon-440614-latest.xpi downloaded
+cp -r /Users/jzeller/JobSchedulerAPI/gaia/build_stage/additional-extensions/* profile-debug/extensions/
+cp -r tools/extensions/{httpd,httpd@gaiamobile.org} profile-debug/extensions/
+Finished: Generating extensions
+test -d .git && cp tools/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit || true
+Profile Ready: please run [b2g|firefox] -profile /Users/jzeller/JobSchedulerAPI/gaia/profile-debug
