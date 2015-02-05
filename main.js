@@ -47,7 +47,7 @@ var wrapper = Cc[contractId].createInstance(Ci.nsISupports);
 var helloWorld = wrapper.wrappedJSObject;
 
 // Test the xpcom component
-console.log(helloWorld.hello());
+dump('HEREHEREHEREHERE');
 
 // Test the navigator api it adds
 var pageMod = require("sdk/page-mod");
